@@ -14,8 +14,10 @@
   margin-bottom: 50px;
   color: rgba(255, 255, 255, 0.8);
   }
-}
-
-.banner-content {
+  &-content {
   color: white;
+  }
+  &-thin {
+  height: 30vh
+  }
 }

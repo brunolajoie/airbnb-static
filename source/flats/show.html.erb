@@ -1,0 +1,53 @@
+<!-- source/flats/show.html.erb -->
+
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+
+
+<div class="banner banner-thin" style="background: url(<%= image_path flat.picture %>)">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+      <div class="flatcard">
+        <%= image_tag flat.owner_picture, class: "avatar-large" %>
+        <p><%= flat.owner_name %></p>
+        <h1><%= flat.description %></h1>
+        <p><%= flat.city %></p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="bookingform">
+        <form action="#" >
+          <h3>Book this flat</h3>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkin" id="checkin">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkout">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <select name="" id="guests" class="form-control">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+        </form>
+      </div>
+    </div>
+
+    <div id="flat-description">
+      <h3>About this flat</h3>
+    </div>
+  </div>
+</div>
+
